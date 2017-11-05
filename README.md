@@ -1,5 +1,5 @@
 # camera-api
-IP Camera API.
+IP Camera API. Leverages Chalice to deploy serverless application to API Gateway and Lambda.
 
 ## Deployment
 ````bash
