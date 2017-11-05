@@ -20,8 +20,9 @@ Recent notification data is stored in DynamoDB.
 
 ## Config
 Configuration data is stored in [SSM Parameter Store](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Parameters:sort=Name).
+
 | Key                         | Type         | Description                                                         |
-|-----------------------------|--------------|---------------------------------------------------------------------|
+| --------------------------- | ------------ | ------------------------------------------------------------------- |
 | /camera/notification_limit  | String       | The max number of notifications allowed in the time window.         |
 | /camera/notification_window | String       | The time period, in minutes, to look back for recent notifications. |
 | /camera/pushover_app_key    | SecureString | Pushover app key.                                                   |
