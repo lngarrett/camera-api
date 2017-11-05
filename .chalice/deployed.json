@@ -1,0 +1,12 @@
+{
+  "main": {
+    "api_handler_name": "camera-api-main",
+    "api_handler_arn": "arn:aws:lambda:us-east-1:939121955975:function:camera-api-main",
+    "lambda_functions": {},
+    "backend": "api",
+    "chalice_version": "1.0.4",
+    "rest_api_id": "m2xexvqimk",
+    "api_gateway_stage": "api",
+    "region": "us-east-1"
+  }
+}
