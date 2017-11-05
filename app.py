@@ -22,7 +22,6 @@ def motion():
     """Check for recent motion. Send motion alert."""
     body = app.current_request.json_body
     camera_name = body['camera_name']
-    dynamodb.put_notification(camera_name=camera_name)
     recent_notifications = dynamodb.get_recent_notifications(
         camera_name=camera_name,
         minutes=NOTIFICATION_WINDOW
@@ -30,6 +29,7 @@ def motion():
     notification_count = len(recent_notifications)
     if notification_count < NOTIFICATION_LIMIT:
         pushover.notification('Motion detected: {}'.format(camera_name))
+        dynamodb.put_notification(camera_name=camera_name)
         response = "{} motion. Sending push notification.".format(camera_name)
     else:
         response = (
